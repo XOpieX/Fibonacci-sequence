@@ -1,0 +1,34 @@
+public class Fib {
+    public static void main(String[] args) {
+
+        fibonaci(0);
+        fibonaci(9);
+        fibonaci(17);
+        fibonaci(20);
+        fibonaci(33);
+
+    }
+
+    public static long[] fibonaci(long max){
+
+        long num = 0;
+        long secNum = 1;
+        long newNum = 0;
+
+        long[] arr = new long[(int) max];
+
+        System.out.print(num + " ");
+
+        for (long i = 0; i < arr.length; i++){
+            if (max > 2) {
+                num = secNum;
+                secNum = newNum;
+                newNum = num + secNum;
+                System.out.print(newNum + " ");
+            }
+        }
+        System.out.println();
+
+        return arr;
+    }
+}
